@@ -16,19 +16,40 @@ class ViewController: UIViewController {
     }
     
     func multiLineString() {
-        let str = "FirstLine\nSecondLine\nThirdLine"
         
-        let multiLineStr = """
+        // 文字列のインデントは、末尾の """ のインデントが基準になる。
+        
+        let multiLineStr1 = """
 FirstLine
 SecondLine
 ThirdLine
 """
         
-        if str == multiLineStr {
-            print("str is equal to multiLineStr.")
-            print(multiLineStr)
+        let multiLineStr2 = """
+        FirstLine
+        SecondLine
+        ThirdLine
+        """
+        
+        let multiLineStr3 = """
+        FirstLine
+        SecondLine
+        ThirdLine
+"""
+        print("multiLineStr1:\n\(multiLineStr1)")
+        print("multiLineStr2:\n\(multiLineStr2)")
+        print("multiLineStr3:\n\(multiLineStr3)")
+        
+        if multiLineStr1 == multiLineStr2 {
+            print("multiLineStr1 is equal to multiLineStr2.")
         } else {
-            print("str is not equal to multiLineStr.")
+            print("multiLineStr1 is not equal to multiLineStr2.")
+        }
+        
+        if multiLineStr1 == multiLineStr3 {
+            print("multiLineStr1 is equal to multiLineStr3.")
+        } else {
+            print("multiLineStr1 is not equal to multiLineStr3.")
         }
     }
 }
